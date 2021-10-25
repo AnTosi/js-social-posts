@@ -131,7 +131,7 @@ for (let i = 0; i < postList.length; i++) {
 
             <div class="likes d-flex py-3">
                 <div class="like col-6 text-center">
-                    <button id="like${i}" datapost-id="${post_id}">
+                    <button id="like${i}" class="" datapost-id="${post_id}">
                         <i class="fas fa-thumbs-up"></i> Mi piace
                     </button>                    
                 </div>
@@ -145,8 +145,25 @@ for (let i = 0; i < postList.length; i++) {
         console.log(likedPost);
         if (likedPost.includes(`${post_id}`)) {
             document.getElementById(`like${i}`).classList.add("liked");
-        }
-        document.querySelector(`button#like${i}`).addEventListener("click", pressLike);
+        } else continue
+
+
+        //questo eventlistener non compare e non fa nulla, non capisco dove sbaglio
+        //provo a semplificarlo e a fargli solo aggiungere liked
+        document.getElementById(`like${i}`).addEventListener("click", function () {
+            console.log(document.getElementById(`like${i}`).classList);
+
+            // if (getElementById(`like${i}`).classList.contains("liked"))  {
+            //     return;
+            // } else {getElementById(`like${i}`).classList.add("liked");
+
+            // }
+        
+            getElementById(`like${i}`).classList.add("liked");
+            // const postID = this.getAttribute(`datapost-id`);
+            // const likeCounter = document.getElementById(`"likesNumber" + post_ID`);
+            // likeCounter.innerHTML = parseInt(likeCounter) + 1;
+        });
 
 
 }
@@ -159,13 +176,16 @@ for (let i = 0; i < postList.length; i++) {
 //     this.addEventListener("click", pressLike)  
 // }
 
+
+//questa funzione semplicemente non va, non capisco perché, non mi dà neanche nessun feedback la console
+//la metto direttamente nell'event listener anche se dovrebbe funzionare lo stesso
 function pressLike() {
-    if (querySelector(`button#like${i}`).classList.contains("liked"))  {
+    if (getElementById(`like${i}`).classList.contains("liked"))  {
         return;
     }
 
-    this.classList.add("liked");
+    getElementById(`like${i}`).classList.add("liked");
     const postID = this.getAttribute(`datapost-id`);
-    const likeCounter = document.getElementById(`"likesNumber" + post_Id`);
+    const likeCounter = document.getElementById(`"likesNumber" + post_ID`);
     likeCounter.innerHTML = parseInt(likeCounter) + 1;
 }
