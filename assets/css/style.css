@@ -41,3 +41,8 @@ p {
 .liked {
     color: cornflowerblue;
 }
+
+button {
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+}
