@@ -16,7 +16,7 @@ let postList = [
         "contenuto": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis suscipit repellendus vitae!",
         "immagine": "https://i.picsum.photos/id/726/450/230.jpg?hmac=oUuekS6Ztvm9rPNulsQJX__Mv6o0MWsSJlgc7p_Ias0",
         "autore": ["Zack Canasta", "https://i.picsum.photos/id/518/50/50.jpg?hmac=NSJ8qtVF-xr09AM3P7psapk3GJSe_8ZakwMlrUInNm0"],
-        "likesN": 0,
+        "likesN": 31,
         "date": "11/05/2021"
     },
 
@@ -25,7 +25,7 @@ let postList = [
         "contenuto": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident nam unde itaque reprehenderit dolorum ex perferendis.6",
         "immagine": "https://i.picsum.photos/id/91/450/230.jpg?hmac=3-Dod75DvwRAgITysdnHiuxBQvgjOm1FdvsfF5gLcC8",
         "autore": ["Bruno Liegi-Bastogne-Liegi", "https://i.picsum.photos/id/274/50/50.jpg?hmac=wd1V_89I-BBmuYYXuHgJujEmwilyBN6LcQ8EkR--umM"],
-        "likesN": 0,
+        "likesN": 18,
         "date": "23/04/2021"
 
     },
@@ -35,7 +35,7 @@ let postList = [
         "contenuto": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad.",
         "immagine": "https://i.picsum.photos/id/1021/450/230.jpg?hmac=CubCGyWGZFi6NQ2DkgSOa8RtYOKy2XXbLIoC59fPjcM",
         "autore": ["Riccardino Fuffolo", ""],
-        "likesN": 0,
+        "likesN": 22,
         "date": "21/01/2020"
 
     },
@@ -45,11 +45,14 @@ let postList = [
         "contenuto": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae dignissimos voluptate magnam ipsa accusantium deserunt autem fugit ad vero.",
         "immagine": "https://i.picsum.photos/id/664/450/230.jpg?hmac=EUFJyOUOG81Z1E8u2Aj6Qw3IqB8Y6nhF21fhbwQjazE",
         "autore": ["Amalia Frellioje", "https://i.picsum.photos/id/30/50/50.jpg?hmac=NwG4W4vHtEenBxNv1J4l62VoTpxnoLu8PXAGf1bdGa0"],
-        "likesN": 0,
+        "likesN": 44,
         "date": "24/10/2021"
 
     },
 ]
+
+let liked = [""];
+
 console.log(postList[1].autore[1]);
 //creato l'array con ciò che chiedeva
 
@@ -123,7 +126,7 @@ for (let i = 0; i < postList.length; i++) {
         </div>
 
         <div class="likes d-flex py-3">
-        <div class="like col-6 text-center">
+        <div class="like ${i} col-6 text-center">
             <i class="fas fa-thumbs-up"></i> Mi piace
         </div>
         <div class= "like_numb col-6 text-center">
@@ -131,6 +134,8 @@ for (let i = 0; i < postList.length; i++) {
         </div>
         </div>
         </div>`;
-
         document.getElementById("post_list").innerHTML += " " + post;
+        document.querySelector(`.like.${i}`).addEventListener("click", function(){
+            this.classList.toggle("liked");
+        })
 }

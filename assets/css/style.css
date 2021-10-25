@@ -37,3 +37,7 @@ p {
 .bold {
     font-weight: bold;
 }
+
+.liked {
+    color: cornflowerblue;
+}
