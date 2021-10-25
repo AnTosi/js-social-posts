@@ -23,7 +23,7 @@ let postList = [
     {
         "id": 0,
         "contenuto": "lorem16",
-        "autore": ["Riccardino Fuffolo", "https://i.picsum.photos/id/518/50/50.jpg?hmac=NSJ8qtVF-xr09AM3P7psapk3GJSe_8ZakwMlrUInNm0"],
+        "autore": ["Riccardino Fuffolo", "https://i.picsum.photos/id/274/50/50.jpg?hmac=wd1V_89I-BBmuYYXuHgJujEmwilyBN6LcQ8EkR--umM"],
         "likesN": 0,
         "date": ""
 
@@ -32,7 +32,7 @@ let postList = [
     {
         "id": 0,
         "contenuto": "lorem9",
-        "autore": ["Bruno Liegi-Bastogne-Liegi", "https://i.picsum.photos/id/518/50/50.jpg?hmac=NSJ8qtVF-xr09AM3P7psapk3GJSe_8ZakwMlrUInNm0"],
+        "autore": ["Bruno Liegi-Bastogne-Liegi", ""],
         "likesN": 0,
         "date": ""
 
@@ -41,7 +41,7 @@ let postList = [
     {
         "id": 0,
         "contenuto": "lorem19",
-        "autore": ["Amalia Frellioje", "https://i.picsum.photos/id/518/50/50.jpg?hmac=NSJ8qtVF-xr09AM3P7psapk3GJSe_8ZakwMlrUInNm0"],
+        "autore": ["Amalia Frellioje", "https://i.picsum.photos/id/30/50/50.jpg?hmac=NwG4W4vHtEenBxNv1J4l62VoTpxnoLu8PXAGf1bdGa0"],
         "likesN": 0,
         "date": ""
 
