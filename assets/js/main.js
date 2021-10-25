@@ -150,6 +150,7 @@ for (let i = 0; i < postList.length; i++) {
 
         //questo eventlistener non compare e non fa nulla, non capisco dove sbaglio
         //provo a semplificarlo e a fargli solo aggiungere liked
+        //niente, ci rinuncio, niente bonus
         document.getElementById(`like${i}`).addEventListener("click", function () {
             console.log(document.getElementById(`like${i}`).classList);
 
